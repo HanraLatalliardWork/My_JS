@@ -1,0 +1,155 @@
+body {
+    background-color: black;
+}
+
+p,h1,h2,h3,h4,h5,h6,h7,h8,span,
+div, span, applet, object, iframe,
+blockquote, pre,a, abbr, acronym, 
+address, big, cite, code,del, dfn, 
+em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, 
+var,b, u, i, center, dl, dt, dd, ol, ul, 
+li,fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td{
+    color: whitesmoke;
+}
+
+
+/* Layout */
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    background-color: rgba(0, 139, 139, 0.5);
+    border-color: rgba(0, 139, 139,0.5);
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.308);
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/* Header Alignements */
+
+HeaderLeft{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width:25%;
+}
+
+.homeIcon{
+    width: 76px;
+    /* height: 50px; */
+    background-image: url("files/img/Home/wolf_Icon_home.png");
+}
+
+.homeIcon:hover{
+    background-image: url("files/img/Home/wolf_Icon_home_Hover.png");
+}
+
+.HeaderCenter{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+HeaderRight{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    width: 25%;
+}
+
+/* Footer */
+
+
+/* links */
+
+.link,
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+.link:hover,
+a:hover {
+    /* color: lightblue; */
+    color: crimson;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.link:active,
+a:active {
+    /* color: red; */
+    color: lightblue;
+    text-decoration: dotted;
+}
+
+
+/* a ScrollBox */
+
+.scrollBox {
+    /* overflow: scroll; */
+    height: 600px;
+    width: 100%;
+}
+
+
+/* images */
+
+.light {
+    background-color: black;
+    color: black;
+}
+
+.dark {
+    background-color: white;
+}
+
+
+/* dropdown */
+
+.index,
+.BottomSectionOfFrame {
+    width: 99%;
+    background-color: white;
+    border: 0.5px black groove;
+}
+
+.index:clicked {
+    background-color: aliceblue;
+}
+
+.menuButton {
+    background-color: white;
+    border: 0.5px black groove;
+    padding: 1px;
+    margin-right: 0px;
+    margin-left: 5px;
+    /* float: right; */
+    /* position: fixed; */
+    background-position: right;
+}
+
+.menuButton:hover {
+    background-color: aqua;
+}
+
+.mainBox {
+    background-color: transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/* the content section */
+Contents{
+    background-color: rgba(128, 255, 0, 0.548);
+}
