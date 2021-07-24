@@ -2,16 +2,20 @@
 
 <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css">
 
-<input type="checkbox" id="toggle_checkbox" onclick="theme('darkOrLight','theme',home)">
-
-                <label for="toggle_checkbox">
-                    <div id="star">
-                        <div class="star" id="star-1">&starf;</div>
-                        <div class="star" id="star-2">&starf;</div>
-                    </div>
-                    <div id="moon"></div>
-                </label>
+<input type="checkbox" id="darkOrLight" onclick="theme('darkOrLight','theme','https://hanralatalliardwork.github.io/wolf_escape_home/','files/customisation/css/boostrap_dark.css','files/customisation/css/bootstrap.css');">
+        <label for="toggle_checkbox">
+            <div id="star">
+                <div class="star" id="star-1">&starf;</div>
+                <div class="star" id="star-2">&starf;</div>
+            </div>
+            <div id="moon"></div>
+        </label>
 */
+
+.Dark_Or_Light_toggle{
+    padding-top:5px;
+}
+
 #toggle_checkbox {
     display: none;
 }
