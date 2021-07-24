@@ -1,4 +1,7 @@
 /*
+
+<link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css">
+
 <input type="checkbox" id="toggle_checkbox" onclick="theme('darkOrLight','theme',home)">
 
                 <label for="toggle_checkbox">

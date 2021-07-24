@@ -9,7 +9,7 @@ function theme(ID = "darkOrLight", ID2 = "theme",home="https://hanralatalliardwo
     }
 }
 
-function initialiseTheme(ID,IDRead,,home="https://hanralatalliardwork.github.io/wolf_escape_home/",themeD="files/customisation/css/boostrap_dark.css",themeL="files/customisation/css/bootstrap.css") {
+function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/wolf_escape_home/",themeD="files/customisation/css/boostrap_dark.css",themeL="files/customisation/css/bootstrap.css") {
     try {
         e=readCookie("theme")
         if (e==="L"){
