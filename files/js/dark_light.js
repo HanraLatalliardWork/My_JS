@@ -7,6 +7,7 @@ function theme(ID = "darkOrLight", ID2 = "theme",home="https://hanralatalliardwo
         document.getElementById(ID2).innerHTML = "<link rel=\"stylesheet\" href=\"" + home + themeD+"\">";
         createCookie('theme',"D","","/");
     }
+    
 }
 
 function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/wolf_escape_home/",themeD="files/customisation/css/boostrap_dark.css",themeL="files/customisation/css/bootstrap.css") {
@@ -31,5 +32,13 @@ function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/w
         document.getElementById(ID).innerHTML = "<link rel=\"stylesheet\" href=\"" + home + themeL+"\">";
         // document.cookie="theme=L";
         createCookie("theme","L","","/");
+    }
+    try{
+        console.log("running checkTheme")
+        checkTheme("theme","DownloadLogo","DownloadButtonCredits","DiscordLogo");
+        console.log("checkTheme has been run successfully")
+    } catch(err) {
+        console.log("failed to run checkTheme")
+        console.log("Theme Check= "+err);
     }
 }
