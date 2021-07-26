@@ -34,7 +34,7 @@ var createManyCookie=function(string){
     document.cookie = string
 }
 var createCookie=function(key="0",value="0",expires="",path="/"){ //modifying cookie == create cookie
-    content=key+"="+value+"; expires="+expires+"; path="+path;
+    content=key+"="+value+"; expires="+expires+"; path="+path+";samesite=Lax";
     document.cookie = content;
 }
 var readCookie=function(key){ //from https://www.w3schools.com/js/js_cookies.asp
