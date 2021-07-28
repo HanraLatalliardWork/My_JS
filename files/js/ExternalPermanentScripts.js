@@ -11,7 +11,7 @@ function AddScripts(IDTo){
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/apply_d_l_from_theme.js"></script>\n';
-    console.log("TheScripts has been loaded with info, e='"+e+"'")
+    console.log("TheScripts has been loaded with info.\n e='"+e+"'")
     e+=TheScripts;
     document.getElementById(IDTo).innerHTML=e;
     console.log(`The content of e has been written.\nCalling bootThemeHead(${IDTo})`)
