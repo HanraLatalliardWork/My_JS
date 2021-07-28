@@ -23,7 +23,7 @@ function bootThemeHead(IDTo){
     var TheHead="",
     e=document.getElementById(IDTo).innerHTML;
     console.log(`The vars have been initialised.\nTheHead='${TheHead}'\ne='${e}'`)
-    TheHead+='\n    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>'
+    TheHead+='\n'
     TheHead+='    <meta charset="utf-8">\n';
     TheHead+='    <meta lang="eng">\n';
     TheHead+='    <meta id="theme">\n';
