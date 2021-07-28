@@ -36,6 +36,7 @@ function bootScripts(IDTo){
     BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
     BootScripts+='    <!-- Place this tag in your head or just before your close body tag. -->\n';
     BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
+    BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
     e+=BootScripts;
     document.getElementById(IDTo).innerHTML=e;
 }
