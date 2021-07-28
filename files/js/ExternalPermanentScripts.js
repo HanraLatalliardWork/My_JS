@@ -40,6 +40,7 @@ function bootScripts(IDTo){
     console.log(`bootScripts(${IDTo}) has sucessefully been called.`)
     var BootScripts="",
     e=document.getElementById(IDTo).innerHTML;
+    console.log("Vars initialised.")
     BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
     BootScripts+='    <script type="text/JavaScript">initialiseTheme("theme","darkOrLight",\'https://hanralatalliardwork.github.io/wolf_escape_home/\',\'files/customisation/css/boostrap_dark.css\',\'files/customisation/css/bootstrap.css\');</script>\n';
     BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
@@ -47,5 +48,7 @@ function bootScripts(IDTo){
     BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
     BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
     e+=BootScripts;
+    console.log("BootScripts written into e")
     document.getElementById(IDTo).innerHTML=e;
+    console.log("e written into page")
 }
