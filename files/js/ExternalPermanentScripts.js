@@ -24,7 +24,7 @@ function bootThemHead(IDTo){
     TheHead+='    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>\n';
     TheHead+='    <link rel="stylesheet" href="files/customisation/css/stylesheet.css">\n';
     TheHead+='    <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css"></link>\n';
-    e+=TheScripts;
+    e+=TheHead;
     document.getElementById(IDTo).innerHTML=e;
 }
 
