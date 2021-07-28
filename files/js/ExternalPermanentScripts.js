@@ -44,7 +44,7 @@ function bootScripts(IDTo){
     console.log("Vars initialised.")
     BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
     BootScripts+='    <script type="text/JavaScript">initialiseTheme("theme","darkOrLight",\'https://hanralatalliardwork.github.io/wolf_escape_home/\',\'files/customisation/css/boostrap_dark.css\',\'files/customisation/css/bootstrap.css\');</script>\n';
-    BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
+    // BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
     BootScripts+='    <!-- Place this tag in your head or just before your close body tag. -->\n';
     BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
     BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
