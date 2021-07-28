@@ -4,7 +4,7 @@ function AddScripts(IDTo){
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
     e=document.getElementById(IDTo).innerHTML;
-    console.log(`Vars inintialised TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
+    console.log(`Vars inintialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
     TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
@@ -23,7 +23,8 @@ function bootThemeHead(IDTo){
     var TheHead="",
     e=document.getElementById(IDTo).innerHTML;
     console.log(`The vars have been initialised.\nTheHead='${TheHead}'\ne='${e}'`)
-    TheHead+='\n    <meta charset="utf-8">\n';
+    TheHead+='\n    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>'
+    TheHead+='    <meta charset="utf-8">\n';
     TheHead+='    <meta lang="eng">\n';
     TheHead+='    <meta id="theme">\n';
     TheHead+='    <meta id="theHead">\n';
