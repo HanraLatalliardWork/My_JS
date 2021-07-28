@@ -4,7 +4,7 @@ function AddScripts(IDTo){
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
     e=document.getElementById(IDTo).innerHTML;
     TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
-    TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/script.js"></script>\n';
+    TheScripts+='    <script type="text/JavaScript" src="'+homeScript+'files/customisation/js/show_hide_id.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
