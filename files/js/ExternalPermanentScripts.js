@@ -1,22 +1,28 @@
 function AddScripts(IDTo){
+    console.log(`In AddScripts(${IDTo})`)
     var TheScripts="",
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
     e=document.getElementById(IDTo).innerHTML;
+    console.log(`Vars inintialised TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
     TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
     TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/apply_d_l_from_theme.js"></script>\n';
+    console.log("TheScripts has been loaded with info, e='"+e+"'")
     e+=TheScripts;
     document.getElementById(IDTo).innerHTML=e;
-    bootThemHead(IDTo);
+    console.log(`The content of e has been written.\nCalling bootThemeHead(${IDTo})`)
+    bootThemeHead(IDTo);
+    console.log(`The function bootThemeHead(${IDTo}) was called successefully.`)
 }
 
-function bootThemHead(IDTo){
+function bootThemeHead(IDTo){
     var TheHead="",
     e=document.getElementById(IDTo).innerHTML;
+    console.log(`The vars have been initialised.\nTheHead='${TheHead}'\ne='${e}'`)
     TheHead+='\n    <meta charset="utf-8">\n';
     TheHead+='    <meta lang="eng">\n';
     TheHead+='    <meta id="theme">\n';
@@ -24,11 +30,14 @@ function bootThemHead(IDTo){
     TheHead+='    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>\n';
     TheHead+='    <link rel="stylesheet" href="css/stylesheet.css">\n';
     TheHead+='    <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css"></link>\n';
+    console.log("TheHead has been loaded")
     e+=TheHead;
     document.getElementById(IDTo).innerHTML=e;
+    console.log("TheHead has been added to e and e has been written in the body of the page.")
 }
 
 function bootScripts(IDTo){
+    console.log(`bootScripts(${IDTo}) has sucessefully been called.`)
     var BootScripts="",
     e=document.getElementById(IDTo).innerHTML;
     BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
