@@ -26,7 +26,7 @@ function AddScripts(IDTo="",block_to_append_to=""){
         'files/js/apply_d_l_from_theme.js"></script>':"hsc"
     };
     for (i in TheLinks){
-        TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i)
+        TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i);
         document.block_to_append_to.appendChild(TheScript);
     }
     // TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
