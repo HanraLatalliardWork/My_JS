@@ -33,7 +33,7 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
     };
     for (i in TheLinks){
         TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i,1);
-        document.head.appendChild(TheScript);
+        document.head.appendChild(TheScripts);
     }
     bootThemeHead(IDTo);
     console.log(`The function bootThemeHead(${IDTo}) was called successfully.`)
