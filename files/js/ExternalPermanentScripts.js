@@ -21,8 +21,7 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
     SiteOrScripts={"hsc":homeScripts,"hsi":homeSite};
-    // e=document.getElementByTagName(IDTo).innerHTML;
-    console.log(`Vars initialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
+    // console.log(`Vars initialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
     var TheLinks={
         'files/js/cookie_dealing.js':"hsc",
         'files/customisation/js/show_hide_id.js':"hsc",
@@ -63,7 +62,7 @@ function bootThemeHead(IDTo){
     TheHead+='    <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css"></link>\n';
     console.log("TheHead has been loaded")
     e+=TheHead;
-    document.getElementById(IDTo).innerHTML=e;
+    document.getElementsByTagName(IDTo).innerHTML=e;
     // console.log("TheHead has been added to e and e has been written in the body of the page.")
     var script=CreateAScript(initialiseHeader("theHead",2),2);
     document.head.appendChild(script);
