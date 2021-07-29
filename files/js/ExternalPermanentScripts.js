@@ -63,16 +63,16 @@ function bootThemeHead(IDTo){
     console.log("TheHead has been loaded")
     e+=TheHead;
     document.getElementsByTagName(IDTo).innerHTML=e;
-    // console.log("TheHead has been added to e and e has been written in the body of the page.")
+    console.log("TheHead has been added to e and e has been written in the body of the page.")
     // var script=CreateAScript(initialiseHeader("theHead",2),2);
     // document.head.appendChild(script);
     
 }
 
-function bootScripts(IDTo="BootJS",block_to_append_to=bootJS){
+function bootScripts(IDTo="BootJS"){//},block_to_append_to=bootJS){
     console.log(`bootScripts(${IDTo}) has sucessefully been called.`)
     var BootScripts="",
-    e=document.getElementById(IDTo).innerHTML,
+    e=document.getElementsByTagName(IDTo).innerHTML,
     script = document.createElement("script");
     console.log("Vars initialised.")
     // BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
@@ -87,7 +87,7 @@ function bootScripts(IDTo="BootJS",block_to_append_to=bootJS){
     BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");initialiseTheme("theme","darkOrLight","https://hanralatalliardwork.github.io/wolf_escape_home/","files/customisation/css/boostrap_dark.css","files/customisation/css/bootstrap.css");writeBodyHeader("header");initialiseTheme("theme","darkOrLight","https://hanralatalliardwork.github.io/wolf_escape_home/","files/customisation/css/boostrap_dark.css","files/customisation/css/bootstrap.css");writeBodyHeader("header");</script>'
     e+=BootScripts;
     console.log("BootScripts written into e")
-    document.getElementById(IDTo).innerHTML=e;
+    document.getElementsByTagName(IDTo).innerHTML=e;
     console.log("e written into page")
     // writeBodyHeader("header");
     // initialiseTheme("theme","darkOrLight",'https://hanralatalliardwork.github.io/wolf_escape_home/','files/customisation/css/boostrap_dark.css','files/customisation/css/bootstrap.css');
