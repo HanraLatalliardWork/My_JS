@@ -69,8 +69,8 @@ function bootThemeHead(IDTo){
     
 }
 
-function bootScripts(IDTo="BootJS"){//},block_to_append_to=bootJS){
-    console.log(`bootScripts(${IDTo}) has sucessefully been called.`)
+function bootScripts(IDTo="bootJS"){//},block_to_append_to=bootJS){
+    console.log(`bootScripts(${IDTo}) has successfully been called.`)
     var BootScripts="",
     e=document.getElementsByTagName(IDTo).innerHTML,
     script = document.createElement("script");
