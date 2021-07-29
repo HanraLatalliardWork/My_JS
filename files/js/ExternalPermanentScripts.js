@@ -15,7 +15,7 @@ function CreateAScript(link,isFileOrFunction=1){
     }
 }
 // function createAMeta()
-function AddScripts(IDTo="",block_to_append_to=head){
+function AddScripts(IDTo=""){//,block_to_append_to=head){
     console.log(`In AddScripts(${IDTo})`)
     var TheScripts="",
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
