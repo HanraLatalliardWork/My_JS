@@ -9,14 +9,14 @@ function CreateAScript(link){
     script.src=link
     return script
 }
-function AddScripts(IDTo="",block_to_append_to=""){
+function AddScripts(IDTo="",block_to_append_to=head){
     console.log(`In AddScripts(${IDTo})`)
     var TheScripts="",
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
-    SiteOrScripts={"hsc":homeScripts,"hsi":homeSite},
-    e=document.getElementById(IDTo).innerHTML;
-    console.log(`Vars inintialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
+    SiteOrScripts={"hsc":homeScripts,"hsi":homeSite};
+    // e=document.getElementById(IDTo).innerHTML;
+    console.log(`Vars initialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
     var TheLinks={
         'files/js/cookie_dealing.js':"hsc",
         'files/customisation/js/show_hide_id.js':"hsc",
@@ -27,7 +27,7 @@ function AddScripts(IDTo="",block_to_append_to=""){
     };
     for (i in TheLinks){
         TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i);
-        document.block_to_append_to.appendChild(TheScript);
+        document.head.appendChild(TheScript);
     }
     // TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
     // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
@@ -62,16 +62,21 @@ function bootThemeHead(IDTo){
     initialiseHeader("theHead",2);
 }
 
-function bootScripts(IDTo){
+function bootScripts(IDTo="BootJS",block_to_append_to=bootJS){
     console.log(`bootScripts(${IDTo}) has sucessefully been called.`)
     var BootScripts="",
-    e=document.getElementById(IDTo).innerHTML;
+    e=document.getElementById(IDTo).innerHTML,
+    script = document.createElement("script");
     console.log("Vars initialised.")
     // BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
     // BootScripts+='    <script type="text/JavaScript">initialiseTheme("theme","darkOrLight",\'https://hanralatalliardwork.github.io/wolf_escape_home/\',\'files/customisation/css/boostrap_dark.css\',\'files/customisation/css/bootstrap.css\');</script>\n';
     // BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
     BootScripts+='    <!-- Place this tag in your head or just before your close body tag. -->\n';
-    BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
+    // BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
+    script.async
+    script.defer
+    script.src="https://buttons.github.io/buttons.js"
+    document.bootJS.appendChild(script);
     // BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
     e+=BootScripts;
     console.log("BootScripts written into e")
