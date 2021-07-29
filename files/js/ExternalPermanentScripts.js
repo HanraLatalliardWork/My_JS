@@ -28,13 +28,14 @@ function bootThemeHead(IDTo){
     TheHead+='    <meta lang="eng">\n';
     TheHead+='    <meta id="theme">\n';
     TheHead+='    <meta id="theHead">\n';
-    TheHead+='    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>\n';
+    // TheHead+='    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>\n';
     TheHead+='    <link rel="stylesheet" href="css/stylesheet.css">\n';
     TheHead+='    <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css"></link>\n';
     console.log("TheHead has been loaded")
     e+=TheHead;
     document.getElementById(IDTo).innerHTML=e;
     console.log("TheHead has been added to e and e has been written in the body of the page.")
+    initialiseHeader("theHead",2);
 }
 
 function bootScripts(IDTo){
@@ -42,14 +43,17 @@ function bootScripts(IDTo){
     var BootScripts="",
     e=document.getElementById(IDTo).innerHTML;
     console.log("Vars initialised.")
-    BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
-    BootScripts+='    <script type="text/JavaScript">initialiseTheme("theme","darkOrLight",\'https://hanralatalliardwork.github.io/wolf_escape_home/\',\'files/customisation/css/boostrap_dark.css\',\'files/customisation/css/bootstrap.css\');</script>\n';
+    // BootScripts+='\n    <script type="text/JavaScript">writeBodyHeader("header");</script>\n';
+    // BootScripts+='    <script type="text/JavaScript">initialiseTheme("theme","darkOrLight",\'https://hanralatalliardwork.github.io/wolf_escape_home/\',\'files/customisation/css/boostrap_dark.css\',\'files/customisation/css/bootstrap.css\');</script>\n';
     // BootScripts+='    <script type="text/JavaScript">UpdateTheme();</script>\n';
     BootScripts+='    <!-- Place this tag in your head or just before your close body tag. -->\n';
     BootScripts+='    <script async defer src="https://buttons.github.io/buttons.js"></script>\n';
-    BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
+    // BootScripts+='    <script type="text/JavaScript">writeBodyHeader("header");</script>'
     e+=BootScripts;
     console.log("BootScripts written into e")
     document.getElementById(IDTo).innerHTML=e;
     console.log("e written into page")
+    writeBodyHeader("header");
+    initialiseTheme("theme","darkOrLight",'https://hanralatalliardwork.github.io/wolf_escape_home/','files/customisation/css/boostrap_dark.css','files/customisation/css/bootstrap.css');
+    writeBodyHeader("header");
 }
