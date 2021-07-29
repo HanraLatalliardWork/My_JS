@@ -21,7 +21,7 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
     SiteOrScripts={"hsc":homeScripts,"hsi":homeSite};
-    // e=document.getElementById(IDTo).innerHTML;
+    // e=document.getElementByTagName(IDTo).innerHTML;
     console.log(`Vars initialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
     var TheLinks={
         'files/js/cookie_dealing.js':"hsc",
@@ -41,7 +41,7 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
 
 function bootThemeHead(IDTo){
     var TheHead="",
-    e=document.getElementById(IDTo).innerHTML;
+    e=document.getElementsByTagName(IDTo).innerHTML;
     var meta=document.createElement("meta")
     meta.charset="utf-8"
     var meta2=document.createElement("meta");
