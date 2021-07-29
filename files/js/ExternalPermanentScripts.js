@@ -41,15 +41,15 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
 function bootThemeHead(IDTo){
     var TheHead="",
     e=document.getElementsByTagName(IDTo).innerHTML;
-    var meta=document.createElement("meta")
-    meta.charset="utf-8"
+    // var meta=document.createElement("meta")
+    // meta.charset="utf-8"
     var meta2=document.createElement("meta");
     meta2.lang="eng";
     var meta3=document.createElement("meta");
     meta3.id="theme";
     var meta4=document.createElement("meta");
     meta4.id="theHead";
-    document.head.appendChild(meta);
+    // document.head.appendChild(meta);
     document.head.appendChild(meta2);
     document.head.appendChild(meta3);
     document.head.appendChild(meta4);
