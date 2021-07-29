@@ -3,12 +3,18 @@
 // Enter: script.type="text/JavaScript"
 // Then: enter url of the js to load with: script.src = url
 // Once everything is done, document.block_to_append_to.appendChild(script);
-function CreateAScript(link){
+function CreateAScript(link,isFileOrFunction=1){
     var script=document.createElement("script");
-    script.type="text/JavaScript";
-    script.src=link
-    return script
+        script.type="text/JavaScript";
+    if (isFileOrFunction===1){
+        script.src=link
+        return script
+    } else {
+        script.text=link;
+        return script
+    }
 }
+// function createAMeta()
 function AddScripts(IDTo="",block_to_append_to=head){
     console.log(`In AddScripts(${IDTo})`)
     var TheScripts="",
@@ -26,19 +32,9 @@ function AddScripts(IDTo="",block_to_append_to=head){
         'files/js/apply_d_l_from_theme.js"></script>':"hsc"
     };
     for (i in TheLinks){
-        TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i);
+        TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i,1);
         document.head.appendChild(TheScript);
     }
-    // TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
-    // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
-    // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
-    // TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
-    // TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
-    // // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/apply_d_l_from_theme.js"></script>\n';
-    // console.log("TheScripts has been loaded with info.\n e='"+e+"'")
-    // e+=TheScripts;
-    // document.getElementById(IDTo).innerHTML=e;
-    // console.log(`The content of e has been written.\nCalling bootThemeHead(${IDTo})`)
     bootThemeHead(IDTo);
     console.log(`The function bootThemeHead(${IDTo}) was called successfully.`)
 }
@@ -46,20 +42,32 @@ function AddScripts(IDTo="",block_to_append_to=head){
 function bootThemeHead(IDTo){
     var TheHead="",
     e=document.getElementById(IDTo).innerHTML;
-    console.log(`The vars have been initialised.\nTheHead='${TheHead}'\ne='${e}'`)
-    TheHead+='\n'
+    var meta=document.createElement("meta")
+    meta.charset="utf-8"
+    var meta2=document.createElement("meta");
+    meta2.lang="eng";
+    var meta3=document.createElement("meta");
+    meta3.id="theme";
+    var meta4=document.createElement("meta");
+    meta4.id="theHead";
+    document.head.appendChild(meta);
+    document.head.appendChild(meta2);
+    document.head.appendChild(meta3);
+    document.head.appendChild(meta4);
     TheHead+='    <meta charset="utf-8">\n';
-    TheHead+='    <meta lang="eng">\n';
-    TheHead+='    <meta id="theme">\n';
-    TheHead+='    <meta id="theHead">\n';
+    // TheHead+='    <meta lang="eng">\n';
+    // TheHead+='    <meta id="theme">\n';
+    // TheHead+='    <meta id="theHead">\n';
     // TheHead+='    <script type="text/JavaScript">initialiseHeader("theHead",2);</script>\n';
     TheHead+='    <link rel="stylesheet" href="css/stylesheet.css">\n';
     TheHead+='    <link rel="stylesheet" href="https://hanralatalliardwork.github.io/My_styling/files/css/toggle.css"></link>\n';
     console.log("TheHead has been loaded")
     e+=TheHead;
     document.getElementById(IDTo).innerHTML=e;
-    console.log("TheHead has been added to e and e has been written in the body of the page.")
-    initialiseHeader("theHead",2);
+    // console.log("TheHead has been added to e and e has been written in the body of the page.")
+    var script=CreateAScript(initialiseHeader("theHead",2),2);
+    document.head.appendChild(script);
+    
 }
 
 function bootScripts(IDTo="BootJS",block_to_append_to=bootJS){
