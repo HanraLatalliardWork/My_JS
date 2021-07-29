@@ -1,22 +1,46 @@
-function AddScripts(IDTo){
+// sollution
+// create a script instance with: var script= document.createElement('script');
+// Enter: script.type="text/JavaScript"
+// Then: enter url of the js to load with: script.src = url
+// Once everything is done, document.block_to_append_to.appendChild(script);
+function CreateAScript(link){
+    var script=document.createElement("script");
+    script.type="text/JavaScript";
+    script.src=link
+    return script
+}
+function AddScripts(IDTo="",block_to_append_to=""){
     console.log(`In AddScripts(${IDTo})`)
     var TheScripts="",
     homeSite="https://hanralatalliardwork.github.io/wolf_escape_home/",
     homeScripts="https://hanralatalliardwork.github.io/My_styling/",
+    SiteOrScripts={"hsc":homeScripts,"hsi":homeSite},
     e=document.getElementById(IDTo).innerHTML;
     console.log(`Vars inintialised:\n TheScripts='${TheScripts}'\nhomeSite='${homeSite}'\nhomeScripts='${homeScripts}'`)
-    TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
-    TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
-    TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
-    TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
-    TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
-    // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/apply_d_l_from_theme.js"></script>\n';
-    console.log("TheScripts has been loaded with info.\n e='"+e+"'")
-    e+=TheScripts;
-    document.getElementById(IDTo).innerHTML=e;
-    console.log(`The content of e has been written.\nCalling bootThemeHead(${IDTo})`)
+    var TheLinks={
+        'files/js/cookie_dealing.js':"hsc",
+        'files/customisation/js/show_hide_id.js':"hsc",
+        'files/js/dark_light.js':"hsc",
+        'files/customisation/js/head.js':"hsi",
+        'files/customisation/js/BodyHeader.js':"hsi",
+        'files/js/apply_d_l_from_theme.js"></script>':"hsc"
+    };
+    for (i in TheLinks){
+        TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i)
+        document.block_to_append_to.appendChild(TheScript);
+    }
+    // TheScripts+='\n    <script type="text/JavaScript" src="'+homeScripts+'files/js/cookie_dealing.js"></script>\n';
+    // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/customisation/js/show_hide_id.js"></script>\n';
+    // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/dark_light.js"></script>\n';
+    // TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/head.js"></script>\n';
+    // TheScripts+='    <script type="text/JavaScript" src="'+homeSite+'files/customisation/js/BodyHeader.js"></script>\n';
+    // // TheScripts+='    <script type="text/JavaScript" src="'+homeScripts+'files/js/apply_d_l_from_theme.js"></script>\n';
+    // console.log("TheScripts has been loaded with info.\n e='"+e+"'")
+    // e+=TheScripts;
+    // document.getElementById(IDTo).innerHTML=e;
+    // console.log(`The content of e has been written.\nCalling bootThemeHead(${IDTo})`)
     bootThemeHead(IDTo);
-    console.log(`The function bootThemeHead(${IDTo}) was called successefully.`)
+    console.log(`The function bootThemeHead(${IDTo}) was called successfully.`)
 }
 
 function bootThemeHead(IDTo){
