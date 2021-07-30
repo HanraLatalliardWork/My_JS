@@ -34,7 +34,9 @@ function AddScripts(IDTo=""){//,block_to_append_to=head){
         TheScripts=CreateAScript(SiteOrScripts[TheLinks[i]]+i,1);
         document.head.appendChild(TheScripts);
     }
+    console.log("going into bootThemeHead")
     bootThemeHead(IDTo);
+    console.log("Out of bootThemeHead")
     console.log(`The function bootThemeHead(${IDTo}) was called successfully.`)
 }
 
