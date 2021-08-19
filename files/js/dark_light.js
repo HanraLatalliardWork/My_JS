@@ -52,6 +52,7 @@ function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/w
         }
     } else {
         console.log("We are not in the home page.")
+        checkTheme("theme","DownloadLogo","DownloadButtonCredits","DiscordLogo");
     }
 }
 // First file
