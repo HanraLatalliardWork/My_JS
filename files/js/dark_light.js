@@ -41,19 +41,18 @@ function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/w
         // document.cookie="theme=L";
         createCookie("theme","L","","/");
     }
-    if (url===home){
-        try{
-            console.log("running checkTheme");
-            checkTheme("theme","DownloadLogo","DownloadButtonCredits","DiscordLogo");
-            console.log("checkTheme has been run successfully");
-        } catch(err) {
-            console.log("failed to run checkTheme");
-            console.log("Theme Check= "+err);
-        }
-    } else {
-        console.log("We are not in the home page.")
-        checkTheme("theme","DownloadLogo","DownloadButtonCredits","DiscordLogo");
-    }
+    // if (url===home){
+    //     try{
+    //         console.log("running checkTheme");
+    //         checkTheme("theme","DownloadLogo","DownloadButtonCredits","DiscordLogo");
+    //         console.log("checkTheme has been run successfully");
+    //     } catch(err) {
+    //         console.log("failed to run checkTheme");
+    //         console.log("Theme Check= "+err);
+    //     }
+    // } else {
+    //     console.log("We are not in the home page.")
+    // }
 }
 // First file
 // function theme(ID = "darkOrLight", ID2 = "theme") {
