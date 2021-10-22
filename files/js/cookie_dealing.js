@@ -1,3 +1,4 @@
+console.log("My_styling/js/cokkie_dealing initialising");
 var createMany=function(string){
     document.cookie = string
 }
@@ -55,3 +56,4 @@ var readCookie=function(key){ //from https://www.w3schools.com/js/js_cookies.asp
 var removeCookie=function(key){
     document.cookie = key+"=a; expires=Sat, 1 Jan 1921 00:00:00 UTC;"
 }
+console.log("My_styling/js/cokkie_dealing initialised");
