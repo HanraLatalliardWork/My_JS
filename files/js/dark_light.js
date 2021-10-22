@@ -1,3 +1,4 @@
+console.log("My_styling/js/dark_light initialising");
 // Second file
 function theme(ID = "darkOrLight", ID2 = "theme",home="https://hanralatalliardwork.github.io/wolf_escape_home/",themeD="files/customisation/css/boostrap_dark.css",themeL="files/customisation/css/bootstrap.css") {
     var WasChecked = document.getElementById(ID).checked;
@@ -94,3 +95,4 @@ function initialiseTheme(ID,IDRead,home="https://hanralatalliardwork.github.io/w
 //         alert("err="+err)
 //     }
 // }
+console.log("My_styling/js/dark_light initialised");
