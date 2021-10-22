@@ -1,3 +1,4 @@
+console.log("show_hide_id initialising");
 function showHide(IDFrom,IDTo,IDText){
     e=document.getElementById(IDFrom).checked;
     if (e===true){
@@ -8,3 +9,4 @@ function showHide(IDFrom,IDTo,IDText){
         document.getElementById(IDText).innerHTML="Show";
     }
 }
+console.log("show_hide_id initialised");
