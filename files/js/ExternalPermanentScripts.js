@@ -96,4 +96,4 @@ function bootScripts(IDTo="bootJS"){//},block_to_append_to=bootJS){
     // initialiseTheme("theme","darkOrLight",'https://hanralatalliardwork.github.io/wolf_escape_home/','files/customisation/css/boostrap_dark.css','files/customisation/css/bootstrap.css');
     // writeBodyHeader("header");
 }
-console.log("My_styling/js/cokkie_dealing initialised.");
+console.log("My_styling/js/ExternalPermanentScripts initialised.");
